@@ -1,0 +1,16 @@
+@import "../assets/styles/mixins.scss";
+
+.MainWrap {
+    transition: margin 0.5s ease-in-out;
+    margin-left: 380px;
+    background-color: #ffdbb7;
+    min-height: auto;
+    @include breakpoint(slight-small) {
+        transition: margin 0.5s ease-in-out;
+        margin-left: 280px;
+    }
+    @include breakpoint(small) {
+        transition: margin 0.5s ease-in-out;
+        margin-left: 0;
+    }
+}

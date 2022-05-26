@@ -1,0 +1,31 @@
+@mixin breakpoint($point) {
+    $breakpoint-extra-small: "(max-width: 376px)";
+    $breakpoint-small: "(max-width: 767px)";
+    $breakpoint-slight-small: "(max-width: 1000px)";
+    $breakpoint-large: "(max-width: 1300px)";
+    $breakpoint-extra-large: "(max-width: 1441px)";
+  
+    @if $point == small {
+      @media screen and #{$breakpoint-small} {
+        @content;
+      }
+    }@else if $point == slight-small {
+        @media screen and #{$breakpoint-slight-small} {
+          @content;
+        }
+    }
+    @else if $point == large {
+      @media screen and #{$breakpoint-large} {
+        @content;
+      }
+    } @else if $point == x-small {
+      @media screen and #{$breakpoint-extra-small} {
+        @content;
+      }
+    } @else if $point == x-large {
+      @media screen and #{$breakpoint-extra-large} {
+        @content;
+      }
+    }
+}
+  

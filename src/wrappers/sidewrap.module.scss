@@ -1,0 +1,12 @@
+@import "../assets/styles/mixins.scss";
+
+.SideWrap {
+    display: flex;
+    flex-direction: column;
+    background-color: #bbd4ff;
+    min-height: auto;
+    @include breakpoint(small) {
+      margin-left: 0;
+      transition: width 2s, height 2s;
+    }
+}

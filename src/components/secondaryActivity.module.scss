@@ -1,0 +1,76 @@
+.S_activity_container {
+    margin-top: 30px; 
+}
+
+.S_activity_container_table {
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+
+.S_activity_container_table::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.S_activity_container_button {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    bottom: 0;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.S_activity_container_button_sub {
+    background-color: #623ce7;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.08rem 0.8rem;
+    font-family: 'Poppins';
+    font-style: "normal";
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    margin-right: 80px;
+}
+
+.S_activity_container_button_sub:disabled {
+    cursor: not-allowed;
+}
+
+.S_activity_container_button_prev {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0.08rem 0.8rem;
+    font-family: 'Poppins';
+    font-style: "normal";
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    /* height: 60px; */
+    border: none;
+    background-color: #707070;
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+.S_activity_container_button_prev:disabled {
+    cursor: not-allowed;
+}

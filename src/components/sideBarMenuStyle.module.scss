@@ -1,0 +1,43 @@
+.SideBarMenu_container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.SideBarMenu_container>p {
+    font-family: 'Poppins';
+    font-style: normal;
+    text-align: left;
+    font-size: 16px;
+    color: rgb(93, 93, 93);
+    font-weight: 600;
+}
+
+.SideBarMenu_container_icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: scale-down;
+}
+
+.SideBarMenu_container_dropdown {
+    cursor: pointer;
+    margin-left: auto;
+    width: 53px;
+    height: 53px;
+    left: 350px;
+    top: 195px;
+    background: #FEFEFF;
+    opacity: 0.4;
+    box-shadow: 0px 100px 80px rgba(41, 72, 152, 0.05), 0px 64.8148px 46.8519px rgba(41, 72, 152, 0.037963), 0px 38.5185px 25.4815px rgba(41, 72, 152, 0.0303704), 0px 20px 13px rgba(41, 72, 152, 0.025), 0px 8.14815px 6.51852px rgba(41, 72, 152, 0.0196296), 0px 1.85185px 3.14815px rgba(41, 72, 152, 0.012037);
+    border-radius: 18px;
+}
+
+.SideBarMenu_container_dropdown > span {
+   margin-top: 15px;
+   font-weight: bolder;
+}

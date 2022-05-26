@@ -1,0 +1,32 @@
+@use '../assets/styles/colors';
+
+.SideNav_container {
+    /* height: 100vh; */
+    padding: 20px;
+    background-color: colors.$base-sidebar-color;
+   /*  border: solid;
+    border-color: rgb(232, 232, 232);
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-right-width: 1px; */
+    padding-top: 40px;
+}
+
+.SideNav_container_profile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%,
+}
+
+.SideNav_container_profile_menuItems {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.SideNav_container_profile_menuItems_item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

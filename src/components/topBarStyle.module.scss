@@ -1,0 +1,47 @@
+.TopBar_container {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.TopBar_container_heading {
+    flex: 50%;
+}
+
+.TopBar_container_heading > p {
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: "#1C1F3E"
+}
+
+
+.TopBar_container_icons {
+    flex: 50%;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: flex-end;
+}
+
+
+.TopBar_container_icons_button {
+    color: #623CE7;
+    background: rgba(98, 60, 231, 0.2);
+    margin-top: -14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-style: normal;
+}

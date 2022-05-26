@@ -1,0 +1,51 @@
+@use '../assets/styles/colors';
+
+.SideBar_container {
+    /* height: 100vh; */
+    padding: 20px;
+    background-color: colors.$base-sidebar-color;
+    padding-top: 40px;
+}
+
+.SideBar_container_profile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%,
+}
+
+.SideBar_container_topInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.SideBar_container_topInfo_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.SideBar_container_topInfo_title > h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    margin: 0;
+}
+
+.SideBar_container_topInfo_title > span {
+    color:rgb(194, 194, 194)
+}
+
+.SideBar_container_topInfo_date {
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Poppins';
+    font-style: normal;
+    color: rgb(194, 194, 194);
+}
+
+.SideBar_container_topInfo_date > p {
+    margin: 0;
+}
