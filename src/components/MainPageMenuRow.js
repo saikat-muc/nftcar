@@ -1,10 +1,10 @@
 import React from 'react';
-import mainPageMenuRow from './mainPageMenuRow.module.scss'
+import mainPageMenuRow from '../styles/mainPageMenuRow.module.scss'
 
+/* Main Page menu rows */
 
 const MainPageMenuRow = ({ data }) => {
     return (
-
         <div className={mainPageMenuRow.MainPageMenuRow_container}>
             {data.map((e, i) => {
                 return <div key={`${i}`} className={mainPageMenuRow.MainPageMenuRow_container_item}>
@@ -13,9 +13,6 @@ const MainPageMenuRow = ({ data }) => {
                 </div>
             })}
         </div>
-
-
-
     );
 };
 

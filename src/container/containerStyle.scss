@@ -62,19 +62,6 @@ input:focus {
   outline: none;
 }
 
-/* .checkboxContainer {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-} */
-
 
 [type=checkbox] {
   width: 1.5rem;
@@ -240,52 +227,6 @@ input:focus {
   }
 }
 
-/* .prevButton {
-  cursor: pointer;
-  font-size: 14px;
-  padding: 0.08rem 0.8rem;
-  font-family: 'Poppins';
-  font-style: "normal";
-  font-weight: 700;
-  font-size: 14px;
-  color: #fff;
-  border: none;
-  background-color: #707070;
-  border-radius: 10px;
-}
-
-.prevButton:disabled {
-  cursor: not-allowed;
-}
-
-.submitButton {
-  background-color: #623ce7;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.08rem 0.8rem;
-  font-family: 'Poppins';
-  font-style: "normal";
-  font-weight: 700;
-  font-size: 14px;
-  color: white;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 60px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: right;
-  -webkit-transition: width 1s ease-in-out;
-  -moz-transition: width 1s ease-in-out;
-  -o-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
-}
-
-.submitButton:disabled {
-  cursor: not-allowed;
-} */
-
 .linkBtns {
   align-items: center;
   border: none;
@@ -368,7 +309,7 @@ input:focus {
   transition: all 800ms ease-in-out !important;
 }
 
-.submitBtn {
+/* .submitBtn {
   height: 100px;
   padding: 20px;
   font-family: Poppins;
@@ -386,4 +327,4 @@ input:focus {
 .submitBtn:hover {
   transition: all 200ms ease-in-out;
   transform: translateY(-4px);
-}
+} */

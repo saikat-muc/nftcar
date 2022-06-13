@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import sideBarMenuStyle from './sideBarMenuStyle.module.scss'
+import sideBarMenuStyle from '../styles/sideBarMenuStyle.module.scss'
 import VerticalLinearStepper from './Stepper';
 import battery from '../assets/svgnavmenus/battery.svg'
 import setting from '../assets/svgnavmenus/settings.svg'
 
 const IMG_URL = "https://media-exp1.licdn.com/dms/image/C4D0BAQENOqqYZBdYVA/company-logo_200_200/0/1637312766372?e=2147483647&v=beta&t=bgNk402xiHuDsU7GdSr0WZVhr86zEL6B6itQ4jqiv8Q"
 
+// side bar menu with stepper
 const SideBarMenu = ({stage, setStage}) => {
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false) // state to open close stepper menu
     
     const nav = useNavigate()
     //const changeStage = () => setStage(()=>stage+1)
 
    const openMenu = () => setIsOpen(() => !isOpen)
 
+   // set primary stage of mint process on mount
     useEffect(()=> setStage(0), [])
 
     useEffect(()=> {

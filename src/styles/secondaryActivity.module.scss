@@ -84,3 +84,15 @@
     transition: all 200ms ease-in-out;
     transform: translateY(-4px);
 }
+
+.S_activity_loader_btn {
+    border: none;
+    width: auto;
+    margin-left: auto;
+    margin-right: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

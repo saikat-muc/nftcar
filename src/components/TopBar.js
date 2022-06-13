@@ -1,7 +1,6 @@
 import React from 'react';
 import MainPageMenuRow from './MainPageMenuRow';
-import topBarStyle from './topBarStyle.module.scss'
-
+import topBarStyle from '../styles/topBarStyle.module.scss'
 import personIcon from "../assets/icons/person.svg"
 import bellIcon from "../assets/icons/Union.svg"
 import a from "../assets/svgtopmenus/Vector.svg"
@@ -42,6 +41,8 @@ const dummyMenuData = [
         url: g
     },
 ]
+
+/* Main top bar of website with the items menu */
 
 const TopBar = () => {
     return (

@@ -1,9 +1,10 @@
 import React from 'react';
 import SideBarMenu from './SideBarMenu';
-import sideBarStyle from './sideBarStyle.module.scss'
+import sideBarStyle from '../styles/sideBarStyle.module.scss'
 
 const CAR_SCAN_PIC_URL = "https://worldwide.kia.com/int/image/kia.jpg"
 
+// Side bar containing profile and menus
 const SideBar = ({stage, setStage}) => {
     return (
         <div className={sideBarStyle.SideBar_container}>
@@ -29,8 +30,6 @@ const SideBar = ({stage, setStage}) => {
             </div>
 
             <SideBarMenu stage={stage} setStage={setStage}/>
-
-
         </div>
 
         

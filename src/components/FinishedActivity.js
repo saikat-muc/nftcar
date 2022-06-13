@@ -2,7 +2,6 @@ import { Button } from '@mui/material';
 import React, { useEffect } from 'react';
 
 const FinishedActivity = ({setStage}) => {
-
     return (
         <div>
             Finish

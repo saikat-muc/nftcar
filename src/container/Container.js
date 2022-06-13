@@ -12,12 +12,13 @@ import SecondaryActivity from '../components/SecondaryActivity';
 import FinishedActivity from '../components/FinishedActivity';
 import PrimaryActivity from '../components/PrimaryActivity';
 
+/* Main landing page, defining entire layout and mechanism of the App */
 const Container = () => {
 
-    const [stage, setStage] = useState(0)
-    const [pre, setPre] = useState("")
-    const [post, setPost] = useState("")
-    const [csv, setCsv] = useState(null)
+    // primary states of the entire application
+    const [stage, setStage] = useState(0) // stage of transaction
+    const [pre, setPre] = useState("") // vin number store
+    const [csv, setCsv] = useState(null) // csv data store
 
     return (
 
@@ -37,14 +38,12 @@ const Container = () => {
                 <TopBar />
                 <Routes>
                     <Route path="/" element={<MainActivity stage={stage} setStage={setStage} />} />
-                    <Route path="/primary" element={<PrimaryActivity stage={stage} setStage={setStage} pre={pre} post={post} setPre={setPre} setPost={setPost} setCsv={setCsv}/>} />
-                    <Route path="/second" element={<SecondaryActivity stage={stage} setStage={setStage} pre={pre} post={post} csv={csv}/>} />
+                    <Route path="/primary" element={<PrimaryActivity stage={stage} setStage={setStage} pre={pre} setPre={setPre} setCsv={setCsv}/>} />
+                    <Route path="/second" element={<SecondaryActivity stage={stage} setStage={setStage} pre={pre} csv={csv}/>} />
                     <Route path="/finish" element={<FinishedActivity setStage={setStage} />} />
                 </Routes>
             </div>
         </div>
-
-
     );
 };
 

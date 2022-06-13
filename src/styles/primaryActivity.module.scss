@@ -1,0 +1,137 @@
+.pa_btn1 {
+    background-color: white;
+    height: 100px;
+    border: solid;
+    padding: 10px;
+    border-color: #F3F2F2;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-width: 1px;
+    border-style: 1px dashed #B0B0B0;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
+    border-radius: 10px;
+}
+
+.pa_input1 {
+    height: 40px;
+    font-size: 20px;
+    border: solid;
+    border-color: #A9B8CD;
+    border-width: 1px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    width: 140px;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: "Tomorrow";
+    font-style: normal;
+}
+
+.pa_input2 {
+    height: 100px;;
+    background-color: white;
+    border: dashed;
+    border-color: #F3F2F2;
+    border-width: 2px;
+    border-style: 1px dashed #B0B0B0;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
+    border-radius: 10px;
+}
+
+.pa_container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pa_submitBtn {
+    height: 100px;
+    padding: 20px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    background-color: #623CE7;
+    box-shadow: 0px 100px 80px rgba(98, 60, 231, 0.07), 0px 64.8148px 46.8519px rgba(98, 60, 231, 0.0531481), 0px 38.5185px 25.4815px rgba(98, 60, 231, 0.0425185), 0px 20px 13px rgba(98, 60, 231, 0.035), 0px 8.14815px 6.51852px rgba(98, 60, 231, 0.0274815), 0px 1.85185px 3.14815px rgba(98, 60, 231, 0.0168519);
+  }
+  
+.pa_submitBtn:hover {
+    transition: all 200ms ease-in-out;
+    transform: translateY(-4px);
+}
+
+.pa_btn1_container {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.pa_btn1_container_heading {
+    margin: 0;
+    float: left;
+    color: #A9B8CD;
+    font-weight: bold;
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 14px;
+}
+
+.pa_btn1_container_input_container {
+    margin-right: auto;
+    height: 50px;
+    display: flex;
+    flex-direction: coloumn; 
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.pa_btn1_container_input_container_input_head {
+    font-family: "Tomorrow"; 
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 500; 
+    color: #A9B8CD;
+}
+
+.pa_btn2_container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pa_btn2_container_heading {
+    margin: 0;
+    color: #1C1F3E; 
+    font-weight: 700;
+    font-family: "Poppins"; 
+    font-style: normal; 
+    font-size: 26px;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 200px;
+}
+
+.pa_btn2_container_heading_sub {
+    cursor: pointer;
+    margin: 0;
+    color: #A9B8CD;
+    font-weight: bold;
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 12px;
+    text-align: start;
+}
