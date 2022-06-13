@@ -348,7 +348,8 @@ const SecondaryActivity = ({ setStage, pre, post, csv }) => {
                                 setLabel("Mint")
                                 setLoading(false)
                                 setDone(false)
-                                setStage(1)
+                                nav("/primary")
+                                setStage(0)
                                 return
                             }
 
@@ -379,6 +380,7 @@ const SecondaryActivity = ({ setStage, pre, post, csv }) => {
                                 </div>)
 
                                 selected.forEach(e => {
+                                    console.log(e?.values?.currentCert?.props?.cert?.ipf, e?.values?.currentCert?.props?.cert?.nft)
                                     e.values.prevCert = <ButtonB cert={{
                                         date: e.values.currentCert.props.cert.date,
                                         ipf: e?.values?.currentCert?.props?.cert?.ipf ?? "https://www.w3.org/Provider/Style/dummy.html",

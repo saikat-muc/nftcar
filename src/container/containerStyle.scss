@@ -313,3 +313,77 @@ input:focus {
   stroke: #623ce7;
   fill: #623ce7;
 }
+
+/* Stepper css */
+
+/* .css-qivjh0-MuiStepLabel-label {
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
+
+.Mui-completed .css-8t49rw-MuiStepConnector-line {
+  border-color: #020246 !important;
+  transition: all 500ms ease-in-out !important;
+}
+
+.Mui-active .css-8t49rw-MuiStepConnector-line {
+  border-color: #020246 !important;
+  transition: all 500ms ease-in-out !important;
+}
+
+.Mui-disabled .css-8t49rw-MuiStepConnector-line {
+  min-height: 40px;
+  border-color: #bdbdbd !important;
+  transition: all 500ms ease-in-out !important;
+}  */ 
+
+.MuiSvgIcon-root {
+  transition: color 1s cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
+
+.MuiStepLabel-label {
+  transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
+
+.MuiSvgIcon-root-MuiStepIcon-root {
+  transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
+
+.Mui-completed .MuiStepConnector-line {
+  border-color: #020246 !important;
+  transition: all 800ms ease-in-out !important;
+}
+
+.Mui-active .MuiStepConnector-line {
+  border-color: #020246 !important;
+  transition: all 800ms ease-in-out !important;
+}
+
+.Mui-disabled .MuiStepConnector-line {
+  min-height: 40px;
+  border-color: #bdbdbd !important;
+  transition: all 800ms ease-in-out !important;
+}
+
+.submitBtn {
+  height: 100px;
+  padding: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  background-color: #623CE7;
+  box-shadow: 0px 100px 80px rgba(98, 60, 231, 0.07), 0px 64.8148px 46.8519px rgba(98, 60, 231, 0.0531481), 0px 38.5185px 25.4815px rgba(98, 60, 231, 0.0425185), 0px 20px 13px rgba(98, 60, 231, 0.035), 0px 8.14815px 6.51852px rgba(98, 60, 231, 0.0274815), 0px 1.85185px 3.14815px rgba(98, 60, 231, 0.0168519);
+}
+
+.submitBtn:hover {
+  transition: all 200ms ease-in-out;
+  transform: translateY(-4px);
+}

@@ -29,9 +29,64 @@ export function SvgBox () {
 const style2 = { margin: 0, color: "#B2AEAE", fontSize: "11px" }
 const style = { display: "flex", flexDirection: "row", gap: "5px", justifyContent: "center", alignItems: "center" }
 
+const linkArray = [
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/F15D439AB98AFE20084D92B0476B8C5FAAA186EEAF7EA08B51059A07B3FA4865/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmSJNJAj6rtbZR11MrnUYzM28mrW7L7vfANDM2kr2jMpXf",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/Qma2jC9KH145rNecP4ngHUgo4iHcZBFNFSHWf7fRdMf7y5"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/DEDE25F8C9AD0721D33109668C2F9556E1C7684ED72E10C86E5D04CFF2C26388/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmYXi5pmrAGbQtyicELCGJeejUpdd8dqFwyuUzKPfJsm6k",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmPkX4hUU1oz9t5xJA5pN6GjL5PhvbqwYn9MuyPp9R2itx"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/7AEAC0C2DD0A8BDFE6A5BEF2E2B2F6690DBE2BCD6EBE09954F38654E452B1EA0/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmbRGzswEYxwpR77Gg8C3YzLm9DNuG2PLm1Mm7hjwWqUdm",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmQXggmMoqjcksuJ8RFNi7S8wejGtaAED3wEuJHjDkDkzp"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/E2B8A5B2DB8C97439EB4F9919E2D4902ABB7DF9DBD744AACBD034F01B94EA13C/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmU5AwhuG1xUJJWt5qMNkECu2CBUK6Hk5qy6mMtesyFttQ",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmdCUFqACqmLMiKJAyiCHXQ8VHSsNm9tCEmLjYzncAhCCr"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/AD4389D6C146D6B7C27AA24AF7036AF445AC562817F40D266A5955858C85F5E7/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmRF8KcTY631qBYEWBjyPcyXfCKdnh8mFxy3ngN7ej2qVh",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmNVQu7ou9uWyzuCZQm4EriMuYGdebGJzc7Yfusx9ViW7Z"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/284B3ED800BA980B9C66E11AC231AF3509E4689EE1EAD59C04EC596F5D74442A/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmRiRbyRthdfcHPZgTe6XFg6KqyXz9ZRyh3oYq3SDatUDb",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmbgNJ1LvoyVQPt7BSie3M7b5s18GYTBFTDcWQS5LfVQxT"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/F15D439AB98AFE20084D92B0476B8C5FAAA186EEAF7EA08B51059A07B3FA4865/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmSJNJAj6rtbZR11MrnUYzM28mrW7L7vfANDM2kr2jMpXf",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/Qma2jC9KH145rNecP4ngHUgo4iHcZBFNFSHWf7fRdMf7y5"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/DEDE25F8C9AD0721D33109668C2F9556E1C7684ED72E10C86E5D04CFF2C26388/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmYXi5pmrAGbQtyicELCGJeejUpdd8dqFwyuUzKPfJsm6k",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmPkX4hUU1oz9t5xJA5pN6GjL5PhvbqwYn9MuyPp9R2itx"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/7AEAC0C2DD0A8BDFE6A5BEF2E2B2F6690DBE2BCD6EBE09954F38654E452B1EA0/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmbRGzswEYxwpR77Gg8C3YzLm9DNuG2PLm1Mm7hjwWqUdm",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmQXggmMoqjcksuJ8RFNi7S8wejGtaAED3wEuJHjDkDkzp"
+  },
+  {
+    nft: "https://nft-devnet.xrpl.org/transactions/E2B8A5B2DB8C97439EB4F9919E2D4902ABB7DF9DBD744AACBD034F01B94EA13C/simple",
+    ipf: "https://aqrl.mypinata.cloud/ipfs/QmU5AwhuG1xUJJWt5qMNkECu2CBUK6Hk5qy6mMtesyFttQ",
+    pdf: "https://aqrl.mypinata.cloud/ipfs/QmdCUFqACqmLMiKJAyiCHXQ8VHSsNm9tCEmLjYzncAhCCr"
+  }
+]
+
 const handleDownload = async (e) => {
 
-  const a = []
+  
+
+  /* const a = []
 
   const vals = e.target.parentElement.parentElement.parentElement.innerText.split("\t")
 
@@ -62,7 +117,7 @@ const handleDownload = async (e) => {
   link.download = fileName + ".json";
   document.body.appendChild(link);
   link.click();
-  document.body.removeChild(link);
+  document.body.removeChild(link); */
 
 }
 
@@ -74,9 +129,9 @@ const ButtonB = ({ cert }) => (<div>
     ><SvgBox/></button></div>
 </div>)
 
-const ButtonC = () => {
+const ButtonC = ({pdfLink}) => {
 
-  return (<button target="_blank" onClick={handleDownload} /* onClick={()=> window.open("https://www.w3.org/Provider/Style/dummy.html") } */ style={{
+  return (<button target="_blank" onClick={() => window.open(pdfLink)} /* onClick={()=> window.open("https://www.w3.org/Provider/Style/dummy.html") } */ style={{
     border: "none",
     width: "20px",
     height: "20px",
@@ -93,6 +148,10 @@ const newPerson = (pre, post, csv) => {
 
   if (pre?.length > 0) carVin = pre
 
+  const ipfLink = "https://aqrl.mypinata.cloud/ipfs/QmRiRbyRthdfcHPZgTe6XFg6KqyXz9ZRyh3oYq3SDatUDb"
+  const NFTLink = "https://nft-devnet.xrpl.org/transactions/284B3ED800BA980B9C66E11AC231AF3509E4689EE1EAD59C04EC596F5D74442A/simple"
+  const pdfLink = "https://aqrl.mypinata.cloud/ipfs/QmbgNJ1LvoyVQPt7BSie3M7b5s18GYTBFTDcWQS5LfVQxT"
+  
   return {
     vin: <b>{carVin}</b>,
     type: <b>SUV</b>,
@@ -101,15 +160,15 @@ const newPerson = (pre, post, csv) => {
     year: 2022,
     currentCert: <ButtonB cert={{ 
       date: "12 May 2022",
-      ipf: "https://www.w3.org/Provider/Style/dummy.html",
-      nft: "https://www.w3.org/Provider/Style/dummy.html",
+      ipf: ipfLink,
+      nft: NFTLink,
     }} />,
     prevCert: <ButtonB cert={{ 
       date: "11 May 2022",
-      ipf: "https://www.w3.org/Provider/Style/dummy.html",
-      nft: "https://www.w3.org/Provider/Style/dummy.html", 
+      ipf: ipfLink,
+      nft: NFTLink,
   }} />,
-    history: <ButtonC />
+    history: <ButtonC pdfLink={pdfLink} />
   }
 }
 
@@ -120,17 +179,17 @@ export default function makeData(...lens) {
     const arr = []
 
     const ButtonBCSV = ({ cert }) => (<div>
-      <div style={style}><p>{cert.date}</p><button target="_blank" alt="Open nft link" onClick={() => window.open(cert.nft)} 
+      <div style={style}><p>{cert.date}</p><button target="_blank" /* title={`${cert.nft}`} */ alt="Open nft link" onClick={() => window.open(cert.nft)} 
       className="linkBtns"
       ><SvgNFT/> {/* <img src={nftIcon} alt="nft" /> */}</button>
-        <button target="_blank" alt="Open ipf link" onClick={() => window.open(cert.ipf)} 
+        <button target="_blank" /* title={`${cert.ipf}`} */ alt="Open ipf link" onClick={() => window.open(cert.ipf)} 
         className="linkBtns"
         ><SvgBox/>{/* <img src={threeDCube} alt="ipf" /> */}</button></div>
     </div>)
 
     const ButtonCCSV = ({ history }) => {
 
-      return (<button onClick={handleDownload} style={{
+      return (<button /* title={`${history}`} */ onClick={() => window.open(history)} style={{
         border: "none",
         cursor: "pointer",
         width: "20px",
@@ -152,20 +211,19 @@ export default function makeData(...lens) {
 
       const dumWeb = "https://www.w3.org/Provider/Style/dummy.html"
 
-
       const currCert = {
-        date: d?.currentCert ?? "12 May 2022",
-        ipf: d?.currentCertIPF ?? dumWeb,
-        nft: d?.currentCertNFT ?? dumWeb
+        date: d?.currentCert ?? "11 May 2022",
+        ipf: /* d?.currentCertIPF ?? */ linkArray[i]?.ipf ?? dumWeb,
+        nft: /* d?.currentCertNFT ?? */ linkArray[i]?.nft ?? dumWeb
       }
 
       const prevCert = {
         date: d?.prevCert ?? "12 May 2022",
-        ipf: d?.prevCertIPF ?? dumWeb,
-        nft: d?.prevCertNFT ?? dumWeb
+        ipf: /* d?.prevCertIPF ?? */ linkArray[i]?.ipf ?? dumWeb,
+        nft: /* d?.prevCertNFT ?? */ linkArray[i]?.nft ?? dumWeb
       }
 
-      const history = d?.history ?? dumWeb
+      const history = /* d?.history ?? */ linkArray[i]?.pdf ?? dumWeb
 
       const a = {
         vin: <b>{d?.vin ?? "#MUC-202323"}</b>,

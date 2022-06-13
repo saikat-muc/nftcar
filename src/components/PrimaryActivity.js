@@ -6,6 +6,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Papa from 'papaparse'
 import useWindowSize from '../hooks/screenSize';
+import PaStyle from "./primaryActivity.module.scss"
 
 function InputWithIcon({ setPre, setPost, pre, post }) {
 
@@ -19,8 +20,9 @@ function InputWithIcon({ setPre, setPost, pre, post }) {
 
     return (
         <button
+            className={PaStyle.pa_btn1}
             style={{
-                backgroundColor: "white",
+                /* backgroundColor: "white",
                 height: "100px",
                 border: "solid",
                 padding: "10px",
@@ -30,7 +32,7 @@ function InputWithIcon({ setPre, setPost, pre, post }) {
                 borderWidth: "1px",
                 borderStyle: "1px dashed #B0B0B0",
                 boxShadow: "0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222)",
-                borderRadius: "10px"
+                borderRadius: "10px" */
             }}
         >
 
@@ -40,7 +42,13 @@ function InputWithIcon({ setPre, setPost, pre, post }) {
                 </div>
                 <div style={{ marginRight: "auto", height: "50px", display: "flex", flexDirection: "coloumn", gap: "10px", justifyContent: "center", alignItems: "center" }}>
                     <p style={{ fontFamily: "Tomorrow", fontStyle: "normal", fontSize: "26px", fontWeight: "500", color: "#A9B8CD" }}>#</p>
-                    <input value={pre} onChange={handlePre} maxLength={10} type="text" style={{
+                    <input 
+                        className={PaStyle.pa_input1}
+                        value={pre} 
+                        onChange={handlePre} 
+                        maxLength={10} 
+                        type="text" 
+                        /* style={{
                         height: "40px",
                         fontSize: "20px",
                         border: "solid",
@@ -53,24 +61,8 @@ function InputWithIcon({ setPre, setPost, pre, post }) {
                         padding: 0,
                         textTransform: "uppercase",
                         fontFamily: "Tomorrow", fontStyle: "normal"
-                    }}></input>
-                    {/* <p style={{ color: "#A9B8CD", fontFamily: "Tomorrow", fontStyle: "normal", fontSize: "26px", fontWeight: "500" }}>-</p>
-                    <input value={post} onChange={handlePro} maxLength={5} style={{
-                        height: "40px",
-                        fontSize: "20px",
-                        border: "solid",
-                        borderColor: "#A9B8CD",
-                        borderWidth: "1px",
-                        borderTopWidth: "0px",
-                        borderLeftWidth: "0px",
-                        borderRightWidth: "0px",
-                        "&:focus": {
-                            outline: "none",
-                        },
-                        padding: 0,
-                        width: "70px",
-                        fontFamily: "Tomorrow", fontStyle: "normal"
-                    }}></input> */}
+                    }} */></input>
+                    
                 </div>
 
             </div>
@@ -83,8 +75,12 @@ function InputWithIcon({ setPre, setPost, pre, post }) {
 function UploadWithIcon({ onClick, el, upLbl }) {
 
     const handleDownload = async () => {
-        const myData = `vin,type,make,model,year,currentCert,currentCertIPF,currentCertNFT,prevCert,prevCertIPF,prevCertNFT,history\r#MUC-210452,SUV,First Class,Toyota Corolla,2022,12 may 2022,link,link,11 may 2022,link,link,link`
+        let myData = `vin,type,make,model,year,currentCert,currentCertIPF,currentCertNFT,prevCert,prevCertIPF,prevCertNFT,history\r#MUC-210452,SUV,First Class,Toyota Corolla,2022,12 may 2022,link,link,11 may 2022,link,link,link`
         
+        for(let i = 0; i<9; i++) {
+            myData+="\r#MUC-210452,SUV,First Class,Toyota Corolla,2022,12 may 2022,link,link,11 may 2022,link,link,link"
+        }
+
         const fileName = "file";
         const json = myData
         const blob = new Blob([json], { type: 'text/csv;charset=utf-8;' });
@@ -210,7 +206,8 @@ const PrimaryActivity = ({ setStage, setPre, setPost, pre, post, setCsv }) => {
             </div>
 
             <button
-                style={{
+                className='submitBtn'
+                /* style={{
                     height: "100px",
                     padding: "20px",
                     fontFamily: "Poppins",
@@ -223,7 +220,7 @@ const PrimaryActivity = ({ setStage, setPre, setPost, pre, post, setCsv }) => {
                     color: "white",
                     backgroundColor: "#623CE7",
                     boxShadow: "0px 100px 80px rgba(98, 60, 231, 0.07), 0px 64.8148px 46.8519px rgba(98, 60, 231, 0.0531481), 0px 38.5185px 25.4815px rgba(98, 60, 231, 0.0425185), 0px 20px 13px rgba(98, 60, 231, 0.035), 0px 8.14815px 6.51852px rgba(98, 60, 231, 0.0274815), 0px 1.85185px 3.14815px rgba(98, 60, 231, 0.0168519)"
-                }}
+                }} */
                 onClick={() => {
                     //setStage(() => 1)
                     if (file || pre.length) return nav('/second')

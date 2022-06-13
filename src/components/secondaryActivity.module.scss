@@ -74,3 +74,13 @@
 .S_activity_container_button_prev:disabled {
     cursor: not-allowed;
 }
+
+.S_activity_container_button_prev:hover {
+    transition: all 200ms ease-in-out;
+    transform: translateY(-4px);
+}
+
+.S_activity_container_button_sub:hover {
+    transition: all 200ms ease-in-out;
+    transform: translateY(-4px);
+}

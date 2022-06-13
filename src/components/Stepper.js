@@ -6,6 +6,7 @@ import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import Typography from "@mui/material/Typography";
 import { makeStyles, Paper, StepIcon } from "@mui/material";
+/* import { withStyles } from "@mui/styles"; */
 import { margin } from "@mui/system";
 
 const steps = [
@@ -23,7 +24,21 @@ const steps = [
   }
 ];
 
-export default function VerticalLinearStepper({ stage }) {
+const styles = theme => ({
+  root: {
+    color: "blue",
+    "&$active": {
+      color: "green"
+    },
+    "&$completed": {
+      color: "red"
+    }
+  },
+  active: {},
+  completed: {}
+});
+
+function VerticalLinearStepper({ stage }) {
   const [activeStep, setActiveStep] = React.useState(stage);
 
   React.useEffect(() => setActiveStep(stage), [stage])
@@ -67,14 +82,14 @@ export default function VerticalLinearStepper({ stage }) {
               >
                 {step.label}
               </StepLabel>
-              <StepContent>
+              {/* <StepContent>
 
                 <Box sx={{ mb: 2 }}>
                   <div>
 
                   </div>
                 </Box>
-              </StepContent>
+              </StepContent> */}
             </Step>
           ))}
         </Stepper>
@@ -83,3 +98,5 @@ export default function VerticalLinearStepper({ stage }) {
 
   );
 }
+
+export default VerticalLinearStepper; /* withStyles(styles)(VerticalLinearStepper); */
